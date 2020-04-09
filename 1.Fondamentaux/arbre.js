@@ -13,29 +13,30 @@ class Noeud {
                 this.droite = new Noeud(v)
             } else {
                 this.gauche.ajouterValeur(v)
-                //A faire : améliorer l'emplacement de la nouvelle valeur
-                //pas encore compris ce qu evut dire "ameliorer"
-                //ali proposition
-                this.racine.droite) {
-                    let str;
-                    if (g !== undefined) {
-                        str += g.valeur + '\t';
-                        this.afficherArbre(g.gauche, g.droite);
-                    }
-                    if (d !== undefined) {
-                        str += d.valeur + '\n';
-                        this.afficherArbre(d.gauche, d.droite);
-                    }
-                }
-
-                //
-                
+                //A faire : améliorer l'emplacement de la nouvelle valeur              
                 
             }
         }
     }
 }
-   
+/* solution:
+    ajouterValeur(v){
+        if (v<this.valeur){
+            if (this.gauche === undefined){
+                this.gauche = new Noeud(v)
+            } else {
+                this.gauche.ajouterValeur(v)
+            }
+        } else {
+            if (this.droite === undefined){
+                this.droite = new Noeud(v)
+            } else {
+                this.droite.ajouterValeur(v)
+            }
+        }
+    }
+
+*/
 class Arbre {
     constructor(valeur) {
         this.racine = new Noeud(valeur)
