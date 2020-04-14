@@ -25,7 +25,10 @@ const req = https.get(url, (res) => {
   res.on('end', () => {
     console.log(JSON.parse(resultat).tx);
   });
-
+  
+  /*res.on('end', () => {
+    console.log(JSON.parse(resultat.tx).hash);
+  });*/
 
   /*res.on('data', d => {
     process.stdout.write(d)
