@@ -20,9 +20,10 @@ const req = https.get(url, (res) => {
   res.on('end', () => {
     console.log(JSON.parse(resultat).height);
   });
-
+  
+  //Encore à voir: recuperer les hash des transaction de façon récursive
   res.on('end', () => {
-    console.log(JSON.parse(resultat).hash);
+    console.log(JSON.parse(resultat).tx);
   });
 
 
